@@ -7739,10 +7739,11 @@ barrier rectifier, 3 A (Fairchild)</description>
 <part name="CIN" library="rcl" deviceset="C-US" device="025-050X050"/>
 <part name="VOUT(1)" library="wirepad" deviceset="3,81/1,4" device=""/>
 <part name="CSTBYMD" library="rcl" deviceset="C-US" device="025-050X050"/>
-<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="GND" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="RUN" library="wirepad" deviceset="3,81/1,4" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7766,7 +7767,7 @@ barrier rectifier, 3 A (Fairchild)</description>
 <instance part="RSENSE" gate="G$1" x="142.24" y="53.34"/>
 <instance part="C8" gate="G$1" x="106.68" y="33.02" rot="R90"/>
 <instance part="DA" gate="G$1" x="99.06" y="78.74" rot="R90"/>
-<instance part="DB" gate="G$1" x="99.06" y="38.1" rot="R270"/>
+<instance part="DB" gate="G$1" x="99.06" y="40.64" rot="R270"/>
 <instance part="D2" gate="1" x="172.72" y="88.9" rot="R90"/>
 <instance part="D1" gate="1" x="172.72" y="45.72" rot="R270"/>
 <instance part="D" gate="G$1" x="165.1" y="93.98"/>
@@ -7780,10 +7781,11 @@ barrier rectifier, 3 A (Fairchild)</description>
 <instance part="CIN" gate="G$1" x="195.58" y="27.94" rot="R180"/>
 <instance part="VOUT(1)" gate="1" x="215.9" y="111.76" rot="R180"/>
 <instance part="CSTBYMD" gate="G$1" x="50.8" y="33.02" rot="R270"/>
-<instance part="GND1" gate="1" x="5.08" y="25.4"/>
+<instance part="GND" gate="1" x="5.08" y="25.4"/>
 <instance part="GND2" gate="1" x="30.48" y="25.4"/>
 <instance part="GND3" gate="1" x="147.32" y="60.96"/>
 <instance part="GND4" gate="1" x="205.74" y="55.88"/>
+<instance part="RUN" gate="1" x="45.72" y="53.34"/>
 </instances>
 <busses>
 </busses>
@@ -7848,7 +7850,7 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="17.78" y1="63.5" x2="58.42" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="VOUT(1)" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="30.48" y1="58.42" x2="38.1" y2="58.42" width="0.1524" layer="91"/>
@@ -7903,7 +7905,7 @@ barrier rectifier, 3 A (Fairchild)</description>
 <pinref part="DA" gate="G$1" pin="A"/>
 <wire x1="99.06" y1="63.5" x2="124.46" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="76.2" x2="99.06" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="63.5" x2="99.06" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="63.5" x2="99.06" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="DB" gate="G$1" pin="A"/>
 </segment>
 </net>
@@ -7924,7 +7926,7 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="172.72" y1="48.26" x2="172.72" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="SW2" class="0">
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="33.02" x2="119.38" y2="33.02" width="0.1524" layer="91"/>
@@ -7945,7 +7947,7 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="180.34" y1="38.1" x2="172.72" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="0">
+<net name="SW1" class="0">
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="88.9" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
@@ -7972,7 +7974,7 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="93.98" y1="33.02" x2="99.06" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="DB" gate="G$1" pin="C"/>
 <wire x1="99.06" y1="33.02" x2="104.14" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="35.56" x2="99.06" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="38.1" x2="99.06" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -8008,7 +8010,7 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="93.98" y1="35.56" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$25" class="0">
+<net name="VIN" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="127" y1="12.7" x2="165.1" y2="12.7" width="0.1524" layer="91"/>
@@ -8028,9 +8030,49 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="58.42" y1="33.02" x2="53.34" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SGND" class="0">
+<net name="GND" class="0">
 <segment>
-<pinref part="GND1" gate="1" pin="GND"/>
+<pinref part="CIN" gate="G$1" pin="2"/>
+<pinref part="COUT" gate="G$1" pin="2"/>
+<wire x1="195.58" y1="33.02" x2="195.58" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="66.04" x2="195.58" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="66.04" x2="205.74" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND2" gate="1" pin="GND"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="30.48" y1="27.94" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="CSTBYMD" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="33.02" x2="35.56" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="33.02" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="30.48" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND3" gate="1" pin="GND"/>
+<pinref part="RSENSE" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="PGND"/>
+<wire x1="137.16" y1="53.34" x2="134.62" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="53.34" x2="93.98" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="73.66" x2="142.24" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="73.66" x2="142.24" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="CVCC" gate="G$1" pin="2"/>
+<wire x1="142.24" y1="68.58" x2="142.24" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="63.5" x2="134.62" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="EXTVCC"/>
+<wire x1="134.62" y1="63.5" x2="132.08" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="68.58" x2="142.24" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="53.34" x2="134.62" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="25.4" x2="137.16" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="25.4" x2="137.16" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="68.58" x2="147.32" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="63.5" x2="147.32" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="CF" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="GND" gate="1" pin="GND"/>
 <pinref part="CC2" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="76.2" x2="5.08" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="76.2" x2="5.08" y2="68.58" width="0.1524" layer="91"/>
@@ -8055,53 +8097,80 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="58.42" y1="38.1" x2="50.8" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="38.1" x2="50.8" y2="58.42" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="30.48" y1="27.94" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="CSTBYMD" gate="G$1" pin="2"/>
-<wire x1="45.72" y1="33.02" x2="35.56" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="33.02" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="30.48" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
-</segment>
 </net>
-<net name="PGND" class="0">
+<net name="N$17" class="0">
 <segment>
-<pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="RSENSE" gate="G$1" pin="1"/>
-<pinref part="U$1" gate="G$1" pin="PGND"/>
-<wire x1="137.16" y1="53.34" x2="134.62" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="53.34" x2="93.98" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="73.66" x2="142.24" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="73.66" x2="142.24" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="CVCC" gate="G$1" pin="2"/>
-<wire x1="142.24" y1="68.58" x2="142.24" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="63.5" x2="134.62" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="EXTVCC"/>
-<wire x1="134.62" y1="63.5" x2="132.08" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="68.58" x2="142.24" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="53.34" x2="134.62" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="25.4" x2="137.16" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="25.4" x2="137.16" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="68.58" x2="147.32" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="63.5" x2="147.32" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<pinref part="CIN" gate="G$1" pin="2"/>
-<pinref part="COUT" gate="G$1" pin="2"/>
-<wire x1="195.58" y1="33.02" x2="195.58" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="66.04" x2="195.58" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="66.04" x2="205.74" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="66.04" x2="205.74" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="RUN" gate="1" pin="P"/>
+<pinref part="U$1" gate="G$1" pin="RUN"/>
+<wire x1="48.26" y1="53.34" x2="58.42" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="108,1,55.88,73.66,N$2,,,,,"/>
+<approved hash="108,1,43.18,73.66,N$3,,,,,"/>
+<approved hash="108,1,30.48,68.58,N$4,,,,,"/>
+<approved hash="108,1,17.78,58.42,N$7,,,,,"/>
+<approved hash="108,1,165.1,111.76,VOUT(1),,,,,"/>
+<approved hash="108,1,195.58,111.76,VOUT(1),,,,,"/>
+<approved hash="108,1,165.1,99.06,VOUT(1),,,,,"/>
+<approved hash="108,1,99.06,88.9,N$11,,,,,"/>
+<approved hash="108,1,114.3,73.66,N$12,,,,,"/>
+<approved hash="108,1,99.06,63.5,N$13,,,,,"/>
+<approved hash="108,1,165.1,55.88,N$16,,,,,"/>
+<approved hash="108,1,147.32,53.34,N$16,,,,,"/>
+<approved hash="108,1,165.1,38.1,SW2,,,,,"/>
+<approved hash="108,1,119.38,43.18,SW2,,,,,"/>
+<approved hash="108,1,172.72,38.1,SW2,,,,,"/>
+<approved hash="108,1,172.72,81.28,SW1,,,,,"/>
+<approved hash="108,1,165.1,81.28,SW1,,,,,"/>
+<approved hash="108,1,165.1,78.74,SW1,,,,,"/>
+<approved hash="108,1,119.38,78.74,SW1,,,,,"/>
+<approved hash="108,1,99.06,33.02,N$20,,,,,"/>
+<approved hash="108,1,154.94,48.26,N$9,,,,,"/>
+<approved hash="108,1,165.1,12.7,VIN,,,,,"/>
+<approved hash="108,1,195.58,12.7,VIN,,,,,"/>
+<approved hash="108,1,50.8,58.42,GND,,,,,"/>
+<approved hash="108,1,30.48,30.48,GND,,,,,"/>
+<approved hash="108,1,5.08,76.2,GND,,,,,"/>
+<approved hash="108,1,195.58,66.04,GND,,,,,"/>
+<approved hash="108,1,5.08,55.88,GND,,,,,"/>
+<approved hash="108,1,134.62,53.34,GND,,,,,"/>
+<approved hash="108,1,5.08,48.26,GND,,,,,"/>
+<approved hash="108,1,137.16,53.34,GND,,,,,"/>
+<approved hash="108,1,134.62,63.5,GND,,,,,"/>
+<approved hash="108,1,142.24,68.58,GND,,,,,"/>
+<approved hash="108,1,5.08,58.42,GND,,,,,"/>
+<approved hash="108,1,5.08,68.58,GND,,,,,"/>
+<approved hash="110,1,99.06,35.56,N$24,N$20,,,,"/>
+<approved hash="111,1,99.06,78.74,SW1,,,,,"/>
+<approved hash="111,1,99.06,78.74,SW1,,,,,"/>
+<approved hash="111,1,99.06,35.56,N$24,,,,,"/>
+<approved hash="113,1,16.51,81.6,CSS,,,,,"/>
+<approved hash="113,1,31.4748,35.56,R4,,,,,"/>
+<approved hash="113,1,49.53,72.5156,C2,,,,,"/>
+<approved hash="113,1,22.86,69.5748,RC,,,,,"/>
+<approved hash="113,1,24.13,74.0916,CC2,,,,,"/>
+<approved hash="113,1,11.43,66.4716,CC1,,,,,"/>
+<approved hash="113,1,25.4,59.4148,R2,,,,,"/>
+<approved hash="113,1,10.16,59.4148,R1,,,,,"/>
+<approved hash="113,1,107.95,90.0444,C5,,,,,"/>
+<approved hash="113,1,128.27,74.916,CF,,,,,"/>
+<approved hash="113,1,128.27,66.7554,CVCC,,,,,"/>
+<approved hash="113,1,66.04,26.3948,R5,,,,,"/>
+<approved hash="113,1,76.2,18.7748,R6,,,,,"/>
+<approved hash="113,1,142.24,54.3348,RSENSE,,,,,"/>
+<approved hash="113,1,107.95,34.1644,C8,,,,,"/>
+<approved hash="113,1,121.92,13.6948,R8,,,,,"/>
+<approved hash="113,1,218.719,11.5274,VIN,,,,,"/>
+<approved hash="113,1,179.459,68.58,L1,,,,,"/>
+<approved hash="113,1,198.835,97.79,COUT,,,,,"/>
+<approved hash="113,1,193.784,29.21,CIN,,,,,"/>
+<approved hash="113,1,212.073,110.587,VOUT(1),,,,,"/>
+<approved hash="113,1,49.53,27.0199,CSTBYMD,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
