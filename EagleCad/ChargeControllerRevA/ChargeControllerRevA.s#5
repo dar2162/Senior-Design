@@ -8037,7 +8037,7 @@ barrier rectifier, 3 A (Fairchild)</description>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="-CHRG" library="wirepad" deviceset="3,81/1,4" device=""/>
 <part name="-FLT" library="wirepad" deviceset="3,81/1,4" device=""/>
-<part name="U$2" library="SeniorDesign" deviceset="LTC4000-1(B)" device="GN"/>
+<part name="U$2" library="SeniorDesign" deviceset="LTC4000-1(B)" device="GN" value="LTC4000-1"/>
 </parts>
 <sheets>
 <sheet>

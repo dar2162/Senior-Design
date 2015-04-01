@@ -7998,7 +7998,6 @@ barrier rectifier, 3 A (Fairchild)</description>
 <part name="L1" library="rcl" deviceset="L-US" device="6000-XXX-RC"/>
 <part name="C9" library="rcl" deviceset="C-US" device="025-050X050"/>
 <part name="CIN2" library="rcl" deviceset="C-US" device="025-050X050"/>
-<part name="VOUT(1)" library="wirepad" deviceset="3,81/1,4" device=""/>
 <part name="CSTBYMD" library="rcl" deviceset="C-US" device="025-050X050"/>
 <part name="GND" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
@@ -8038,6 +8037,14 @@ barrier rectifier, 3 A (Fairchild)</description>
 <part name="-CHRG" library="wirepad" deviceset="3,81/1,4" device=""/>
 <part name="-FLT" library="wirepad" deviceset="3,81/1,4" device=""/>
 <part name="U$2" library="SeniorDesign" deviceset="LTC4000-1(B)" device="GN" value="LTC4000-1"/>
+<part name="CIN1" library="rcl" deviceset="C-US" device="025-050X050"/>
+<part name="CIN3" library="rcl" deviceset="C-US" device="025-050X050"/>
+<part name="CIN4" library="rcl" deviceset="C-US" device="025-050X050"/>
+<part name="GND9" library="supply1" deviceset="GND" device=""/>
+<part name="COUT1" library="rcl" deviceset="C-US" device="025-050X050"/>
+<part name="COUT2" library="rcl" deviceset="C-US" device="025-050X050"/>
+<part name="COUT3" library="rcl" deviceset="C-US" device="025-050X050"/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8072,7 +8079,6 @@ barrier rectifier, 3 A (Fairchild)</description>
 <instance part="L1" gate="G$1" x="180.34" y="68.58"/>
 <instance part="C9" gate="G$1" x="195.58" y="99.06"/>
 <instance part="CIN2" gate="G$1" x="195.58" y="27.94" rot="R180"/>
-<instance part="VOUT(1)" gate="1" x="213.36" y="114.3" rot="R270"/>
 <instance part="CSTBYMD" gate="G$1" x="50.8" y="33.02" rot="R270"/>
 <instance part="GND" gate="1" x="5.08" y="25.4"/>
 <instance part="GND2" gate="1" x="30.48" y="25.4"/>
@@ -8112,6 +8118,14 @@ barrier rectifier, 3 A (Fairchild)</description>
 <instance part="-CHRG" gate="1" x="167.64" y="-76.2"/>
 <instance part="-FLT" gate="1" x="167.64" y="-81.28"/>
 <instance part="U$2" gate="G$1" x="210.82" y="-63.5"/>
+<instance part="CIN1" gate="G$1" x="200.66" y="7.62"/>
+<instance part="CIN3" gate="G$1" x="208.28" y="7.62"/>
+<instance part="CIN4" gate="G$1" x="215.9" y="7.62"/>
+<instance part="GND9" gate="1" x="218.44" y="-2.54"/>
+<instance part="COUT1" gate="G$1" x="198.12" y="124.46"/>
+<instance part="COUT2" gate="G$1" x="205.74" y="124.46"/>
+<instance part="COUT3" gate="G$1" x="213.36" y="124.46"/>
+<instance part="GND10" gate="1" x="218.44" y="114.3"/>
 </instances>
 <busses>
 </busses>
@@ -8193,18 +8207,17 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="30.48" y1="58.42" x2="38.1" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="58.42" x2="38.1" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="111.76" x2="165.1" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="111.76" x2="195.58" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="111.76" x2="190.5" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="D2" gate="1" pin="C"/>
+<wire x1="190.5" y1="111.76" x2="195.58" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="91.44" x2="172.72" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="D" gate="G$1" pin="D"/>
 <wire x1="172.72" y1="99.06" x2="165.1" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="99.06" x2="165.1" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="195.58" y1="101.6" x2="195.58" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="VOUT(1)" gate="1" pin="P"/>
-<wire x1="195.58" y1="111.76" x2="213.36" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="111.76" x2="228.6" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="D"/>
-<wire x1="213.36" y1="111.76" x2="228.6" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="-33.02" x2="213.36" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="-12.7" x2="233.68" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="-12.7" x2="233.68" y2="99.06" width="0.1524" layer="91"/>
@@ -8212,6 +8225,13 @@ barrier rectifier, 3 A (Fairchild)</description>
 <wire x1="228.6" y1="99.06" x2="228.6" y2="111.76" width="0.1524" layer="91"/>
 <junction x="228.6" y="111.76"/>
 <pinref part="U$2" gate="G$1" pin="IID"/>
+<pinref part="COUT3" gate="G$1" pin="1"/>
+<pinref part="COUT2" gate="G$1" pin="1"/>
+<wire x1="213.36" y1="127" x2="205.74" y2="127" width="0.1524" layer="91"/>
+<pinref part="COUT1" gate="G$1" pin="1"/>
+<wire x1="205.74" y1="127" x2="198.12" y2="127" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="127" x2="190.5" y2="127" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="127" x2="190.5" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -8378,12 +8398,19 @@ barrier rectifier, 3 A (Fairchild)</description>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="134.62" y1="-7.62" x2="165.1" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="-7.62" x2="195.58" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="-7.62" x2="195.58" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="-7.62" x2="195.58" y2="10.16" width="0.1524" layer="91"/>
 <junction x="195.58" y="12.7"/>
+<wire x1="195.58" y1="10.16" x2="195.58" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="-53.34" x2="165.1" y2="-53.34" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="-53.34" x2="165.1" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="165.1" y="-7.62"/>
 <pinref part="U$2" gate="G$1" pin="CLN"/>
+<pinref part="CIN4" gate="G$1" pin="1"/>
+<pinref part="CIN3" gate="G$1" pin="1"/>
+<wire x1="215.9" y1="10.16" x2="208.28" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="CIN1" gate="G$1" pin="1"/>
+<wire x1="208.28" y1="10.16" x2="200.66" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="10.16" x2="195.58" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -8518,6 +8545,26 @@ barrier rectifier, 3 A (Fairchild)</description>
 <pinref part="GND8" gate="1" pin="GND"/>
 <pinref part="U$2" gate="G$1" pin="GND"/>
 <pinref part="U$2" gate="G$1" pin="GND'"/>
+</segment>
+<segment>
+<pinref part="CIN1" gate="G$1" pin="2"/>
+<pinref part="CIN3" gate="G$1" pin="2"/>
+<wire x1="200.66" y1="2.54" x2="208.28" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="CIN4" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="2.54" x2="215.9" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="2.54" x2="218.44" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="2.54" x2="218.44" y2="0" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="COUT1" gate="G$1" pin="2"/>
+<pinref part="COUT2" gate="G$1" pin="2"/>
+<wire x1="198.12" y1="119.38" x2="205.74" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="COUT3" gate="G$1" pin="2"/>
+<wire x1="205.74" y1="119.38" x2="213.36" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="119.38" x2="218.44" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="119.38" x2="218.44" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$17" class="0">
